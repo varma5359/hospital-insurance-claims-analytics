@@ -611,6 +611,38 @@ Sidebar filters: date range, insurance company, department, status, claim type.
 
 ---
 
+##  Your Deployment Architecture
+```
+┌──────────────┐     ┌──────────────┐     ┌──────────────┐
+│  Local Dev   │────▶│   GitHub     │────▶│    EC2       │
+│  Windows     │     │   Repo       │     │  (Ubuntu)    │
+└──────────────┘     └──────────────┘     └──────┬───────┘
+                                                 │
+                       ┌──────────────┐          │ docker pull
+                       │     ECR      │◀─────────┘
+                       │ (Docker img) │
+                       └──────────────┘
+                                                 │
+                                                 ▼
+                                          ┌──────────────┐
+                                          │ Streamlit    │
+                                          │ :8501 → :80  │
+                                          │ Public URL   │
+                                          └──────────────┘
+```
+
+### Flow:
+
+* Write code locally → push to GitHub
+
+* Build Docker image → push to ECR
+
+* EC2 pulls image from ECR → runs container
+
+* Public IP exposes the dashboard
+
+-----
+
 ## 18. Future Enhancements
 
 - 📄 PDF export of dashboards
