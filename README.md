@@ -1,3 +1,10 @@
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![SQL Server](https://img.shields.io/badge/SQL%20Server-2019+-red)
+![Streamlit](https://img.shields.io/badge/Streamlit-1.32-ff4b4b)
+![Tests](https://img.shields.io/badge/tests-37%20passed-brightgreen)
+![License](https://img.shields.io/badge/license-MIT-blue)
+![Status](https://img.shields.io/badge/status-active-success)
+
 # 🏥 Hospital Insurance Claims & Revenue Analytics
 
 An end-to-end Business Analytics solution for **MediCare Multi-Specialty Hospital**
