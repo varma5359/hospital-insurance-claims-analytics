@@ -1,0 +1,44 @@
+# ---------- Environment & secrets ----------
+.env
+.env.local
+*.env
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ---------- Jupyter ----------
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ---------- Logs ----------
+06_Logs/*.log
+*.log
+
+# ---------- Data (large files) ----------
+data/*.csv
+!data/.gitkeep
+
+# ---------- IDE / OS ----------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# ---------- Streamlit ----------
+.streamlit/secrets.toml
